@@ -56,10 +56,46 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="Hi, I’m Robbie Smith."
-        subtitle="I build mobile and web products that feel intentional, stay maintainable, and ship on time."
+        subtitle="Indiana-based builder creating mobile and web products that feel intentional, stay maintainable, and ship on time."
       />
-      <div className="grid gap-10 lg:grid-cols-[2fr,1fr]">
-        <div className="space-y-6 text-lg text-slate-700 dark:text-slate-200">
+      <div className="grid gap-6 md:grid-cols-[1.2fr,1fr]">
+        <div className="card flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="h-20 w-20 shrink-0 rounded-2xl bg-gradient-to-br from-sky-100 to-slate-100 ring-1 ring-slate-200" />
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
+              About me
+            </p>
+            <p className="text-lg font-semibold text-slate-900">
+              Robbie Smith
+            </p>
+            <p className="text-sm text-slate-600">
+              Mobile + web developer based in Indiana. Friendly, calm, and
+              focused on clear delivery.
+            </p>
+          </div>
+        </div>
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+          <h2 className="text-lg font-semibold text-slate-900">Skills snapshot</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {[
+              "React Native",
+              "Expo",
+              "iOS (SwiftUI basics)",
+              "Android (Kotlin basics)",
+              "Next.js",
+              "TypeScript",
+              "Firebase",
+              "Netlify",
+              "Tailwind CSS",
+            ].map((item) => (
+              <TagBadge key={item} label={item} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-10 grid gap-10 lg:grid-cols-[2fr,1fr]">
+        <div className="space-y-6 text-lg text-slate-700">
           <p>
             I’m a React Native and Next.js developer who enjoys partnering with
             teams to turn sketches into shipped products. My focus is on calm,
@@ -72,25 +108,18 @@ export default function AboutPage() {
             collaborating with designers, PMs, and stakeholders to keep
             decisions moving.
           </p>
-          <div className="flex flex-wrap gap-2">
-            {["React Native", "Expo", "Next.js", "TypeScript", "Firebase", "Netlify"].map(
-              (item) => (
-                <TagBadge key={item} label={item} />
-              ),
-            )}
-          </div>
         </div>
-        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm">
+          <h2 className="text-lg font-semibold text-slate-900">
             Values
           </h2>
-          <ul className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+          <ul className="mt-4 space-y-3 text-sm text-slate-600">
             {values.map((value) => (
-              <li key={value.title} className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800/80">
-                <p className="font-semibold text-slate-900 dark:text-slate-50">
+              <li key={value.title} className="rounded-xl bg-slate-50 p-3">
+                <p className="font-semibold text-slate-900">
                   {value.title}
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300">
+                <p className="text-sm text-slate-600">
                   {value.detail}
                 </p>
               </li>
@@ -100,22 +129,22 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-50">
+        <h2 className="text-xl font-semibold text-slate-900">
           How I got here
         </h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {timeline.map((item) => (
             <div
               key={item.year}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
             >
               <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
                 {item.year}
               </p>
-              <p className="mt-2 text-lg font-semibold text-slate-900 dark:text-slate-50">
+              <p className="mt-2 text-lg font-semibold text-slate-900">
                 {item.title}
               </p>
-              <p className="text-sm text-slate-600 dark:text-slate-300">
+              <p className="text-sm text-slate-600">
                 {item.detail}
               </p>
             </div>

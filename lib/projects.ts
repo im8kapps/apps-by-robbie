@@ -85,7 +85,7 @@ export const projects: Project[] = [
     name: "Apps by Robbie Portfolio",
     category: "Portfolio site",
     description:
-      "The site you’re reading: App Router, theme toggle, and Netlify-friendly contact.",
+      "The site you’re reading: App Router build with Netlify-friendly contact.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Netlify"],
     links: {
       demo: "https://appsbyrobby.com",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     },
     features: [
       "Sectioned single-page experience with smooth scroll",
-      "Dark/light themes saved per visitor",
+      "Responsive layouts that stay lean",
       "SEO meta and share cards",
       "Netlify-ready forms and sitemap",
     ],
@@ -139,7 +139,7 @@ export const projects: Project[] = [
       "Composable charts and KPI cards",
       "Date-range and segment filters",
       "CSV export and saved views",
-      "Light/dark theming for boardroom screens",
+      "Layout tuned for widescreen presentation",
     ],
     challenges:
       "Balanced visual density with clarity. Built reusable chart shells and kept typography restrained so decision-makers can scan quickly.",

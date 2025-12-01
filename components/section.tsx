@@ -28,12 +28,12 @@ export function Section({
               </p>
             ) : null}
             {title ? (
-              <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl">
+              <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
                 {title}
               </h2>
             ) : null}
             {description ? (
-              <p className="text-base text-slate-600 dark:text-slate-300">
+              <p className="text-base text-slate-600">
                 {description}
               </p>
             ) : null}

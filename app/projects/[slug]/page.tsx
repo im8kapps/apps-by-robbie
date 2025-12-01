@@ -48,7 +48,7 @@ export default function ProjectDetail({ params }: Params) {
       <div className="mb-6">
         <Link
           href="/projects"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 transition hover:text-sky-500 dark:text-sky-300"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 transition hover:text-sky-500"
         >
           <ArrowLeft className="h-4 w-4" />
           Back to projects
@@ -58,10 +58,10 @@ export default function ProjectDetail({ params }: Params) {
         <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
           {project.category}
         </p>
-        <h1 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-4xl">
+        <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           {project.name}
         </h1>
-        <p className="text-lg text-slate-600 dark:text-slate-300">
+        <p className="text-lg text-slate-600">
           {project.longDescription}
         </p>
         <div className="flex flex-wrap gap-2">
@@ -69,17 +69,17 @@ export default function ProjectDetail({ params }: Params) {
             <TagBadge key={tech} label={tech} />
           ))}
         </div>
-        <div className="flex flex-wrap gap-3 text-sm font-semibold text-slate-700 dark:text-slate-200">
+        <div className="flex flex-wrap gap-3 text-sm font-semibold text-slate-700">
           <Link
             href={project.links.demo}
-            className="inline-flex items-center gap-2 rounded-full bg-sky-500 px-4 py-2 text-white shadow hover:bg-sky-600 dark:bg-sky-400 dark:text-slate-900 dark:hover:bg-sky-300"
+            className="inline-flex items-center gap-2 rounded-full bg-sky-500 px-4 py-2 text-white shadow hover:bg-sky-600"
           >
             Live demo
             <ExternalLink className="h-4 w-4" />
           </Link>
           <Link
             href={project.links.code}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 hover:border-sky-400 dark:border-slate-700 dark:text-slate-100 dark:hover:border-sky-400"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 hover:border-sky-400"
           >
             View code
             <ArrowUpRight className="h-4 w-4" />
@@ -88,11 +88,11 @@ export default function ProjectDetail({ params }: Params) {
       </div>
 
       <div className="mt-10 grid gap-8 md:grid-cols-3">
-        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm">
+          <h2 className="text-lg font-semibold text-slate-900">
             Features
           </h2>
-          <ul className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+          <ul className="mt-4 space-y-3 text-sm text-slate-600">
             {project.features.map((feature) => (
               <li key={feature} className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
@@ -101,14 +101,14 @@ export default function ProjectDetail({ params }: Params) {
             ))}
           </ul>
         </div>
-        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:col-span-2">
+        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:col-span-2">
           <div className="flex items-center gap-2">
-            <Hammer className="h-5 w-5 text-sky-500 dark:text-sky-300" />
-            <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+            <Hammer className="h-5 w-5 text-sky-500" />
+            <h2 className="text-lg font-semibold text-slate-900">
               Challenges & Solutions
             </h2>
           </div>
-          <p className="mt-4 text-sm text-slate-600 dark:text-slate-300">
+          <p className="mt-4 text-sm text-slate-600">
             {project.challenges}
           </p>
         </div>

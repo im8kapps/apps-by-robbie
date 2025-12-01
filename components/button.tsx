@@ -20,11 +20,11 @@ type ButtonProps = BaseProps &
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-sky-500 text-white shadow-sm hover:bg-sky-600 dark:bg-sky-400 dark:text-slate-950 dark:hover:bg-sky-300",
+    "bg-sky-500 text-white shadow-sm hover:bg-sky-600",
   ghost:
-    "bg-white text-slate-900 shadow hover:shadow-md border border-slate-200 hover:-translate-y-0.5 dark:bg-slate-900 dark:text-slate-50 dark:border-slate-700",
+    "bg-white text-slate-900 shadow hover:shadow-md border border-slate-200 hover:-translate-y-0.5",
   outline:
-    "border border-slate-300 text-slate-800 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800",
+    "border border-slate-300 text-slate-800 hover:bg-slate-100",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {

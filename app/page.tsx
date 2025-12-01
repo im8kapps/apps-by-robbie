@@ -25,6 +25,8 @@ const highlightedTech = [
   "Vercel",
   "Stripe",
   "Notion",
+  "iOS (SwiftUI basics)",
+  "Android (Kotlin basics)",
 ];
 
 const services = [
@@ -49,21 +51,21 @@ export default function Home() {
   return (
     <>
       <Section className="relative overflow-hidden pb-16 pt-12 sm:pt-16">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-sky-100 via-white to-transparent opacity-80 blur-3xl dark:from-sky-900/30 dark:via-slate-950" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-sky-100 via-white to-transparent opacity-80 blur-3xl" />
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-600 shadow-sm ring-1 ring-slate-200/80 dark:bg-slate-900 dark:text-sky-200 dark:ring-slate-800">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-600 shadow-sm ring-1 ring-slate-200/80">
               <Sparkles className="h-4 w-4" />
               Apps by Robbie
             </div>
             <div className="space-y-4">
-              <p className="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+              <p className="text-sm font-semibold uppercase tracking-widest text-slate-500">
                 Robbie Smith — Mobile & Web
               </p>
-              <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 dark:text-slate-50 sm:text-5xl">
+              <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
                 I build clean, practical apps for real people.
               </h1>
-              <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+              <p className="max-w-2xl text-lg text-slate-600">
                 React Native, Expo, and Next.js builds that respect timelines,
                 budgets, and users. From prototypes to launch-ready products,
                 I&apos;m your pragmatic partner.
@@ -77,31 +79,31 @@ export default function Home() {
               <Button href="#contact" variant="ghost" size="lg">
                 Get in Touch
               </Button>
-              <span className="text-sm text-slate-500 dark:text-slate-400">
-                Based in the Pacific Northwest — working globally.
+              <span className="text-sm text-slate-500">
+                Based in Indiana — working globally.
               </span>
             </div>
-            <div className="flex flex-wrap gap-2 text-sm text-slate-500 dark:text-slate-400">
-              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+            <div className="flex flex-wrap gap-2 text-sm text-slate-500">
+              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700">
                 <Stars className="h-4 w-4" />
                 React Native
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700">
                 <Stars className="h-4 w-4" />
                 Next.js App Router
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
+              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700">
                 <Stars className="h-4 w-4" />
                 Ship + iterate fast
               </span>
             </div>
           </div>
-          <div className="card relative max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-lg dark:border-slate-800 dark:bg-slate-900">
+          <div className="card relative max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
             <div className="absolute right-4 top-4 h-10 w-10 rounded-full bg-sky-500/10 blur-2xl" />
-            <p className="text-sm font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
               Quick Snapshot
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-slate-700 dark:text-slate-200">
+            <ul className="mt-4 space-y-3 text-sm text-slate-700">
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
                 7+ years building mobile & web products with TypeScript.
@@ -133,15 +135,15 @@ export default function Home() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="card rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+              className="card rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="flex items-center gap-3">
-                <service.icon className="h-5 w-5 text-sky-500 dark:text-sky-300" />
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+                <service.icon className="h-5 w-5 text-sky-500" />
+                <h3 className="text-lg font-semibold text-slate-900">
                   {service.title}
                 </h3>
               </div>
-              <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
+              <p className="mt-3 text-sm text-slate-600">
                 {service.desc}
               </p>
             </div>
@@ -185,13 +187,13 @@ export default function Home() {
         description="Tell me what you’re building and when you’d like to ship. I’ll reply with a simple roadmap and next steps."
         className="pb-24"
       >
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-r from-white via-sky-50 to-white p-8 shadow-sm dark:border-slate-800 dark:from-slate-900 dark:via-slate-900/80 dark:to-slate-900">
+        <div className="rounded-2xl border border-slate-200 bg-gradient-to-r from-white via-sky-50 to-white p-8 shadow-sm">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-2">
-              <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">
+              <h3 className="text-2xl font-semibold text-slate-900">
                 Ready when you are.
               </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-300">
+              <p className="text-sm text-slate-600">
                 Share a few details and I&apos;ll respond within one business
                 day.
               </p>

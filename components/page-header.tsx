@@ -20,11 +20,11 @@ export function PageHeader({
           {eyebrow}
         </p>
       ) : null}
-      <h1 className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 sm:text-4xl">
+      <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
         {title}
       </h1>
       {subtitle ? (
-        <p className="text-lg text-slate-600 dark:text-slate-300">
+        <p className="text-lg text-slate-600">
           {subtitle}
         </p>
       ) : null}
