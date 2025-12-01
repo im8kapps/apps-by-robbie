@@ -7,15 +7,17 @@ import { cn } from "@/lib/utils";
 type ProjectCardProps = {
   project: Project;
   className?: string;
+  style?: React.CSSProperties;
 };
 
-export function ProjectCard({ project, className }: ProjectCardProps) {
+export function ProjectCard({ project, className, style }: ProjectCardProps) {
   return (
     <div
       className={cn(
         "card group flex h-full flex-col rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg",
         className,
       )}
+      style={style}
     >
       <div className="flex items-start justify-between gap-4">
         <div>

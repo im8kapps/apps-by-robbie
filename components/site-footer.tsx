@@ -51,7 +51,7 @@ export function SiteFooter() {
           </Link>
           <Link
             className="rounded-full border border-slate-200 p-2 transition hover:border-sky-400 hover:text-sky-600"
-            href="mailto:robby@appsbyrobby.com"
+            href="mailto:robbie@appsbyrobbie.com"
           >
             <Mail className="h-4 w-4" aria-label="Email Robbie" />
           </Link>

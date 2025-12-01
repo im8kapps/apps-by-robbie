@@ -45,7 +45,7 @@ export default function ProjectDetail({ params }: Params) {
 
   return (
     <Section className="pb-24 pt-12 sm:pt-16">
-      <div className="mb-6">
+      <div className="mb-6 fade-up" style={{ animationDelay: "60ms" }}>
         <Link
           href="/projects"
           className="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 transition hover:text-sky-500"
@@ -54,7 +54,7 @@ export default function ProjectDetail({ params }: Params) {
           Back to projects
         </Link>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-4 fade-up" style={{ animationDelay: "100ms" }}>
         <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
           {project.category}
         </p>
@@ -88,7 +88,7 @@ export default function ProjectDetail({ params }: Params) {
       </div>
 
       <div className="mt-10 grid gap-8 md:grid-cols-3">
-        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm">
+        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm fade-up" style={{ animationDelay: "140ms" }}>
           <h2 className="text-lg font-semibold text-slate-900">
             Features
           </h2>
@@ -101,7 +101,7 @@ export default function ProjectDetail({ params }: Params) {
             ))}
           </ul>
         </div>
-        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:col-span-2">
+        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm md:col-span-2 fade-up" style={{ animationDelay: "180ms" }}>
           <div className="flex items-center gap-2">
             <Hammer className="h-5 w-5 text-sky-500" />
             <h2 className="text-lg font-semibold text-slate-900">

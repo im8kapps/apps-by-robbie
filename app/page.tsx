@@ -51,9 +51,9 @@ export default function Home() {
   return (
     <>
       <Section className="relative overflow-hidden pb-16 pt-12 sm:pt-16">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-sky-100 via-white to-transparent opacity-80 blur-3xl" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-sky-100 via-white to-blue-50 opacity-80 blur-3xl" />
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <div className="space-y-6">
+          <div className="space-y-6 fade-up" style={{ animationDelay: "60ms" }}>
             <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-600 shadow-sm ring-1 ring-slate-200/80">
               <Sparkles className="h-4 w-4" />
               Apps by Robbie
@@ -98,7 +98,10 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="card relative max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
+          <div
+            className="card relative max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-lg fade-up"
+            style={{ animationDelay: "140ms" }}
+          >
             <div className="absolute right-4 top-4 h-10 w-10 rounded-full bg-sky-500/10 blur-2xl" />
             <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
               Quick Snapshot
@@ -135,7 +138,8 @@ export default function Home() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="card rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              className="card rounded-2xl border border-sky-100 bg-gradient-to-b from-white to-sky-50 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg fade-up"
+              style={{ animationDelay: "80ms" }}
             >
               <div className="flex items-center gap-3">
                 <service.icon className="h-5 w-5 text-sky-500" />
@@ -169,8 +173,13 @@ export default function Home() {
         title="A few projects that show how I approach product delivery."
       >
         <div className="grid gap-6 md:grid-cols-3">
-          {projects.slice(0, 3).map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {projects.slice(0, 3).map((project, index) => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              className="fade-up"
+              style={{ animationDelay: `${index * 80}ms` }}
+            />
           ))}
         </div>
         <div className="mt-8">
@@ -200,8 +209,8 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button href="/contact">Open contact page</Button>
-              <Button href="mailto:robby@appsbyrobby.com" variant="ghost">
-                Email robby@appsbyrobby.com
+              <Button href="mailto:robbie@appsbyrobby.com" variant="ghost">
+                Email robbie@appsbyrobby.com
               </Button>
             </div>
           </div>

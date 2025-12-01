@@ -19,10 +19,10 @@ export default function ContactPage() {
       />
 
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm fade-up" style={{ animationDelay: "60ms" }}>
           <ContactForm />
         </div>
-        <div className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm fade-up" style={{ animationDelay: "120ms" }}>
           <h2 className="text-xl font-semibold text-slate-900">
             How I work
           </h2>

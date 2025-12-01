@@ -15,7 +15,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: #f8fafc;
+  background: linear-gradient(135deg, #f8fbff 0%, #eef7ff 45%, #f8fafc 100%);
   color: #0f172a;
   transition: background-color 200ms ease, color 200ms ease;
 }
@@ -36,4 +36,35 @@ section {
 .card {
   background: #ffffff;
   border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: fade-up 600ms ease-out forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 600ms ease-out forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

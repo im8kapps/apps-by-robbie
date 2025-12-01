@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section } from "@/components/section";
 import { PageHeader } from "@/components/page-header";
 import { TagBadge } from "@/components/tag-badge";
@@ -59,8 +60,20 @@ export default function AboutPage() {
         subtitle="Indiana-based builder creating mobile and web products that feel intentional, stay maintainable, and ship on time."
       />
       <div className="grid gap-6 md:grid-cols-[1.2fr,1fr]">
-        <div className="card flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="h-20 w-20 shrink-0 rounded-2xl bg-gradient-to-br from-sky-100 to-slate-100 ring-1 ring-slate-200" />
+        <div
+          className="card flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm fade-up"
+          style={{ animationDelay: "60ms" }}
+        >
+          <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl ring-1 ring-slate-200">
+            <Image
+              src="/84A5DC63-614A-4045-B48B-876DD5012888_1_105_c.jpeg"
+              alt="Robbie Smith headshot"
+              fill
+              sizes="80px"
+              className="object-cover"
+              priority
+            />
+          </div>
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
               About me
@@ -74,7 +87,10 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div
+          className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm fade-up"
+          style={{ animationDelay: "120ms" }}
+        >
           <h2 className="text-lg font-semibold text-slate-900">Skills snapshot</h2>
           <div className="mt-3 flex flex-wrap gap-2">
             {[
@@ -95,7 +111,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[2fr,1fr]">
-        <div className="space-y-6 text-lg text-slate-700">
+        <div className="space-y-6 text-lg text-slate-700 fade-up" style={{ animationDelay: "80ms" }}>
           <p>
             I’m a React Native and Next.js developer who enjoys partnering with
             teams to turn sketches into shipped products. My focus is on calm,
@@ -109,7 +125,7 @@ export default function AboutPage() {
             decisions moving.
           </p>
         </div>
-        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm">
+        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm fade-up" style={{ animationDelay: "140ms" }}>
           <h2 className="text-lg font-semibold text-slate-900">
             Values
           </h2>

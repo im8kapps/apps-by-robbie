@@ -16,7 +16,7 @@ export function ContactForm() {
       return "Thanks! I received your message and will reply within one business day.";
     }
     if (status === "error") {
-      return "Something went wrong. Please try again or email robby@appsbyrobby.com.";
+      return "Something went wrong. Please try again or email robbie@appsbyrobbie.com.";
     }
     return "";
   }, [status]);
@@ -122,9 +122,9 @@ export function ContactForm() {
           Or email{" "}
           <a
             className="font-semibold text-sky-600"
-            href="mailto:robby@appsbyrobby.com"
+            href="mailto:robbie@appsbyrobbie.com"
           >
-            robby@appsbyrobby.com
+            robbie@appsbyrobbie.com
           </a>
         </p>
       </div>
