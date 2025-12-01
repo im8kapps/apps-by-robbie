@@ -1,0 +1,127 @@
+import type { Metadata } from "next";
+import { Section } from "@/components/section";
+import { PageHeader } from "@/components/page-header";
+import { TagBadge } from "@/components/tag-badge";
+
+export const metadata: Metadata = {
+  title: "About Robbie | Apps by Robbie",
+  description:
+    "Meet Robbie Smith, a React Native and web developer building mobile apps, web apps, and small-business sites.",
+};
+
+const values = [
+  {
+    title: "Clear communication",
+    detail: "Straightforward updates, async-friendly, and no jargon walls.",
+  },
+  {
+    title: "Maintainable code",
+    detail:
+      "TypeScript-first, predictable folder structures, and readable components.",
+  },
+  {
+    title: "Calm delivery",
+    detail: "Short feedback loops, scoped milestones, and demo-ready builds.",
+  },
+];
+
+const timeline = [
+  {
+    year: "2016",
+    title: "Started shipping mobile apps",
+    detail: "Built my first React Native app for a local nonprofit’s volunteers.",
+  },
+  {
+    year: "2019",
+    title: "Product engineer at a SaaS startup",
+    detail: "Owned mobile and web dashboards, introduced TypeScript across teams.",
+  },
+  {
+    year: "2022",
+    title: "Independent builder",
+    detail:
+      "Partnered with founders and small businesses on Expo apps and marketing sites.",
+  },
+  {
+    year: "Now",
+    title: "Apps by Robbie",
+    detail:
+      "Helping teams ship mobile + web experiences with predictable, calm roadmaps.",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <Section className="pb-24 pt-12 sm:pt-16">
+      <PageHeader
+        eyebrow="About"
+        title="Hi, I’m Robbie Smith."
+        subtitle="I build mobile and web products that feel intentional, stay maintainable, and ship on time."
+      />
+      <div className="grid gap-10 lg:grid-cols-[2fr,1fr]">
+        <div className="space-y-6 text-lg text-slate-700 dark:text-slate-200">
+          <p>
+            I’m a React Native and Next.js developer who enjoys partnering with
+            teams to turn sketches into shipped products. My focus is on calm,
+            pragmatic delivery: clear milestones, tidy code, and UIs that feel
+            good to use.
+          </p>
+          <p>
+            I have a background in design-adjacent roles, so I value details
+            like microcopy, spacing, and loading states. I’m comfortable
+            collaborating with designers, PMs, and stakeholders to keep
+            decisions moving.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["React Native", "Expo", "Next.js", "TypeScript", "Firebase", "Netlify"].map(
+              (item) => (
+                <TagBadge key={item} label={item} />
+              ),
+            )}
+          </div>
+        </div>
+        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+            Values
+          </h2>
+          <ul className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+            {values.map((value) => (
+              <li key={value.title} className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800/80">
+                <p className="font-semibold text-slate-900 dark:text-slate-50">
+                  {value.title}
+                </p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">
+                  {value.detail}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-50">
+          How I got here
+        </h2>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          {timeline.map((item) => (
+            <div
+              key={item.year}
+              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            >
+              <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
+                {item.year}
+              </p>
+              <p className="mt-2 text-lg font-semibold text-slate-900 dark:text-slate-50">
+                {item.title}
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-300">
+                {item.detail}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+  );
+}
