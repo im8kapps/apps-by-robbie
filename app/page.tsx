@@ -6,6 +6,7 @@ import {
   Sparkles,
   Stars,
 } from "lucide-react";
+import Image from "next/image";
 import { Section } from "@/components/section";
 import { Button } from "@/components/button";
 import { TagBadge } from "@/components/tag-badge";
@@ -51,21 +52,21 @@ export default function Home() {
   return (
     <>
       <Section className="relative overflow-hidden pb-16 pt-12 sm:pt-16">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-sky-100 via-white to-blue-50 opacity-80 blur-3xl" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[var(--brand-ice)] via-[var(--brand-surface)] to-[var(--brand-ice-deep)] opacity-80 blur-3xl" />
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="space-y-6 fade-up" style={{ animationDelay: "60ms" }}>
-            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-600 shadow-sm ring-1 ring-slate-200/80">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[rgba(255,255,255,0.06)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--brand-blue)] shadow-sm ring-1 ring-[rgba(255,255,255,0.16)]">
               <Sparkles className="h-4 w-4" />
               Apps by Robbie
             </div>
             <div className="space-y-4">
-              <p className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+              <p className="text-sm font-semibold uppercase tracking-widest text-slate-300">
                 Robbie Smith — Mobile & Web
               </p>
-              <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
+              <h1 className="text-4xl font-semibold leading-tight tracking-tight text-[var(--brand-navy)] sm:text-5xl">
                 I build clean, practical apps for real people.
               </h1>
-              <p className="max-w-2xl text-lg text-slate-600">
+              <p className="max-w-2xl text-lg text-slate-200">
                 React Native, Expo, and Next.js builds that respect timelines,
                 budgets, and users. From prototypes to launch-ready products,
                 I&apos;m your pragmatic partner.
@@ -79,51 +80,63 @@ export default function Home() {
               <Button href="#contact" variant="ghost" size="lg">
                 Get in Touch
               </Button>
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-slate-300">
                 Based in Indiana — working globally.
               </span>
             </div>
-            <div className="flex flex-wrap gap-2 text-sm text-slate-500">
-              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700">
+            <div className="flex flex-wrap gap-2 text-sm text-slate-300">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[rgba(255,255,255,0.04)] px-3 py-1 text-[var(--brand-navy)]">
                 <Stars className="h-4 w-4" />
                 React Native
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[rgba(255,255,255,0.04)] px-3 py-1 text-[var(--brand-navy)]">
                 <Stars className="h-4 w-4" />
                 Next.js App Router
               </span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-slate-700">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[rgba(255,255,255,0.04)] px-3 py-1 text-[var(--brand-navy)]">
                 <Stars className="h-4 w-4" />
                 Ship + iterate fast
               </span>
             </div>
           </div>
-          <div
-            className="card relative max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-lg fade-up"
-            style={{ animationDelay: "140ms" }}
-          >
-            <div className="absolute right-4 top-4 h-10 w-10 rounded-full bg-sky-500/10 blur-2xl" />
-            <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-              Quick Snapshot
-            </p>
-            <ul className="mt-4 space-y-3 text-sm text-slate-700">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
-                7+ years building mobile & web products with TypeScript.
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
-                Comfortable across the stack: UI polish, API wiring, deploys.
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
-                Focused on maintainable patterns teams can live with.
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
-                Friendly, direct communication — async or live.
-              </li>
-            </ul>
+          <div className="flex w-full max-w-md flex-col gap-4 fade-up" style={{ animationDelay: "140ms" }}>
+            <div className="card overflow-hidden rounded-3xl border border-[rgba(255,255,255,0.08)] bg-[var(--brand-surface)] shadow-lg">
+              <div className="relative aspect-[16/7]">
+                <Image
+                  src="/logo-banner.png"
+                  alt="Apps by Robbie branding"
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 480px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,19,34,0.65)] via-transparent to-[rgba(10,19,34,0.4)]" />
+              </div>
+            </div>
+            <div className="card relative rounded-3xl border border-[rgba(255,255,255,0.08)] bg-[var(--brand-surface)] p-6 shadow-lg">
+              <div className="absolute right-4 top-4 h-10 w-10 rounded-full bg-[rgba(29,158,216,0.16)] blur-2xl" />
+              <p className="text-sm font-semibold uppercase tracking-wide text-slate-300">
+                Quick Snapshot
+              </p>
+              <ul className="mt-4 space-y-3 text-sm text-slate-100">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
+                  7+ years building mobile & web products with TypeScript.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
+                  Comfortable across the stack: UI polish, API wiring, deploys.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
+                  Focused on maintainable patterns teams can live with.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
+                  Friendly, direct communication — async or live.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </Section>
@@ -138,16 +151,16 @@ export default function Home() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="card rounded-2xl border border-sky-100 bg-gradient-to-b from-white to-sky-50 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg fade-up"
+              className="card rounded-2xl border border-[rgba(255,255,255,0.08)] bg-gradient-to-b from-[var(--brand-surface)] to-[var(--brand-surface-strong)] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg fade-up"
               style={{ animationDelay: "80ms" }}
             >
               <div className="flex items-center gap-3">
-                <service.icon className="h-5 w-5 text-sky-500" />
-                <h3 className="text-lg font-semibold text-slate-900">
+                <service.icon className="h-5 w-5 text-[var(--brand-orange)]" />
+                <h3 className="text-lg font-semibold text-[var(--brand-navy)]">
                   {service.title}
                 </h3>
               </div>
-              <p className="mt-3 text-sm text-slate-600">
+              <p className="mt-3 text-sm text-slate-200">
                 {service.desc}
               </p>
             </div>
@@ -196,13 +209,13 @@ export default function Home() {
         description="Tell me what you’re building and when you’d like to ship. I’ll reply with a simple roadmap and next steps."
         className="pb-24"
       >
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-r from-white via-sky-50 to-white p-8 shadow-sm">
+        <div className="rounded-2xl border border-[rgba(255,255,255,0.08)] bg-gradient-to-r from-[var(--brand-surface)] via-[var(--brand-surface-strong)] to-[rgba(20,28,45,0.7)] p-8 shadow-sm">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-2">
-              <h3 className="text-2xl font-semibold text-slate-900">
+              <h3 className="text-2xl font-semibold text-[var(--brand-navy)]">
                 Ready when you are.
               </h3>
-              <p className="text-sm text-slate-600">
+              <p className="text-sm text-slate-300">
                 Share a few details and I&apos;ll respond within one business
                 day.
               </p>

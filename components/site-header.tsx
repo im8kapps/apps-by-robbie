@@ -15,14 +15,14 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-200/70 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-[rgba(255,255,255,0.06)] bg-[rgba(12,22,38,0.9)] backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <span className="rounded-full bg-sky-100 px-3 py-1 text-sm font-semibold text-sky-600">
+          <span className="rounded-full bg-[rgba(40,163,228,0.12)] px-3 py-1 text-sm font-semibold text-[var(--brand-blue)]">
             Apps by Robbie
           </span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 sm:flex">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-[var(--brand-navy)] sm:flex">
           {navItems.map((item) => {
             const isActive =
               item.href === "/"
@@ -33,8 +33,8 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "transition hover:text-sky-600",
-                  isActive && "text-sky-600",
+                  "transition hover:text-[var(--brand-blue)]",
+                  isActive && "text-[var(--brand-blue)]",
                 )}
               >
                 {item.label}
@@ -45,7 +45,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="hidden rounded-full border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md sm:inline-flex"
+            className="hidden rounded-full border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.06)] px-3 py-2 text-sm font-semibold text-[var(--brand-navy)] shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--brand-blue)] hover:shadow-md sm:inline-flex"
           >
             Let&apos;s talk
           </Link>
