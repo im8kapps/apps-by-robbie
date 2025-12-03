@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-slate-50 text-slate-900 antialiased transition-colors duration-200",
+          "min-h-screen bg-[var(--brand-ice)] text-[var(--brand-navy)] antialiased transition-colors duration-200",
           manrope.variable,
         )}
       >

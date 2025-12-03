@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Apps by Robbie is a permanent-dark-mode portfolio site for Robbie Smith. It showcases mobile/web projects, outlines services, and provides a quick contact path for new work. Built with Next.js (App Router), TypeScript, and Tailwind, it highlights live client builds, project detail pages, and a Netlify-friendly contact form.
 
 ## Getting Started
 

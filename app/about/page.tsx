@@ -61,10 +61,10 @@ export default function AboutPage() {
       />
       <div className="grid gap-6 md:grid-cols-[1.2fr,1fr]">
         <div
-          className="card flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm fade-up"
+          className="card flex items-center gap-4 rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[var(--brand-surface)] p-5 shadow-sm fade-up"
           style={{ animationDelay: "60ms" }}
         >
-          <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl ring-1 ring-slate-200">
+          <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl ring-1 ring-[rgba(255,255,255,0.12)]">
             <Image
               src="/84A5DC63-614A-4045-B48B-876DD5012888_1_105_c.jpeg"
               alt="Robbie Smith headshot"
@@ -75,23 +75,23 @@ export default function AboutPage() {
             />
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[var(--brand-blue)]">
               About me
             </p>
-            <p className="text-lg font-semibold text-slate-900">
+            <p className="text-lg font-semibold text-[var(--brand-navy)]">
               Robbie Smith
             </p>
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-slate-300">
               Mobile + web developer based in Indiana. Friendly, calm, and
               focused on clear delivery.
             </p>
           </div>
         </div>
         <div
-          className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm fade-up"
+          className="rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[var(--brand-surface)] p-5 shadow-sm fade-up"
           style={{ animationDelay: "120ms" }}
         >
-          <h2 className="text-lg font-semibold text-slate-900">Skills snapshot</h2>
+          <h2 className="text-lg font-semibold text-[var(--brand-navy)]">Skills snapshot</h2>
           <div className="mt-3 flex flex-wrap gap-2">
             {[
               "React Native",
@@ -111,7 +111,7 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[2fr,1fr]">
-        <div className="space-y-6 text-lg text-slate-700 fade-up" style={{ animationDelay: "80ms" }}>
+        <div className="space-y-6 text-lg text-slate-200 fade-up" style={{ animationDelay: "80ms" }}>
           <p>
             I’m a React Native and Next.js developer who enjoys partnering with
             teams to turn sketches into shipped products. My focus is on calm,
@@ -125,17 +125,17 @@ export default function AboutPage() {
             decisions moving.
           </p>
         </div>
-        <div className="card rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm fade-up" style={{ animationDelay: "140ms" }}>
-          <h2 className="text-lg font-semibold text-slate-900">
+        <div className="card rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[var(--brand-surface)] p-6 shadow-sm fade-up" style={{ animationDelay: "140ms" }}>
+          <h2 className="text-lg font-semibold text-[var(--brand-navy)]">
             Values
           </h2>
-          <ul className="mt-4 space-y-3 text-sm text-slate-600">
+          <ul className="mt-4 space-y-3 text-sm text-slate-300">
             {values.map((value) => (
-              <li key={value.title} className="rounded-xl bg-slate-50 p-3">
-                <p className="font-semibold text-slate-900">
+              <li key={value.title} className="rounded-xl bg-[rgba(255,255,255,0.04)] p-3">
+                <p className="font-semibold text-[var(--brand-navy)]">
                   {value.title}
                 </p>
-                <p className="text-sm text-slate-600">
+                <p className="text-sm text-slate-300">
                   {value.detail}
                 </p>
               </li>
@@ -145,22 +145,22 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-xl font-semibold text-slate-900">
+        <h2 className="text-xl font-semibold text-[var(--brand-navy)]">
           How I got here
         </h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {timeline.map((item) => (
             <div
               key={item.year}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+              className="rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[var(--brand-surface)] p-5 shadow-sm"
             >
-              <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
+              <p className="text-sm font-semibold uppercase tracking-wide text-[var(--brand-blue)]">
                 {item.year}
               </p>
-              <p className="mt-2 text-lg font-semibold text-slate-900">
+              <p className="mt-2 text-lg font-semibold text-[var(--brand-navy)]">
                 {item.title}
               </p>
-              <p className="text-sm text-slate-600">
+              <p className="text-sm text-slate-300">
                 {item.detail}
               </p>
             </div>

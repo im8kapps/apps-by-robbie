@@ -16,15 +16,15 @@ export function PageHeader({
   return (
     <div className={cn("mb-10 space-y-3", className)}>
       {eyebrow ? (
-        <p className="text-sm font-semibold uppercase tracking-wide text-sky-500">
+        <p className="text-sm font-semibold uppercase tracking-wide text-[var(--brand-blue)]">
           {eyebrow}
         </p>
       ) : null}
-      <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+      <h1 className="text-3xl font-semibold tracking-tight text-[var(--brand-navy)] sm:text-4xl">
         {title}
       </h1>
       {subtitle ? (
-        <p className="text-lg text-slate-600">
+        <p className="text-lg text-slate-300">
           {subtitle}
         </p>
       ) : null}

@@ -4,10 +4,7 @@ export type Project = {
   category: string;
   description: string;
   tech: string[];
-  links: {
-    demo: string;
-    code: string;
-  };
+  link: string;
   features: string[];
   challenges: string;
   longDescription: string;
@@ -16,15 +13,13 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "trip-pilot",
-    name: "Trip Pilot",
+    name: "Trip Account",
     category: "React Native itinerary app",
     description:
       "A React Native/Expo travel planner with offline caching and collaborative trips.",
     tech: ["React Native", "Expo", "TypeScript", "SQLite", "Firebase"],
-    links: {
-      demo: "https://demo.appsbyrobby.com/trip-pilot",
-      code: "https://github.com/appsbyrobby/trip-pilot",
-    },
+    link: "https://www.musictravel.com/app/",
+
     features: [
       "Shareable itineraries with role-based access",
       "Offline-first notes and checklists",
@@ -37,114 +32,61 @@ export const projects: Project[] = [
       "Trip Pilot keeps travel groups aligned with synced itineraries, lightweight offline storage, and contextual reminders. It pairs Expo’s tooling with TypeScript to stay maintainable and fast to iterate. Firebase backs real-time updates while SQLite caches the essentials on-device for patchy connections.",
   },
   {
-    slug: "harbor-landing",
-    name: "Harbor Landing",
-    category: "Small business landing page",
+    slug: "advanco-llc",
+    name: "Advantage Roofing & Plumbing",
+    category: "Contractor marketing site",
     description:
-      "High-converting marketing site for a marina with fast page loads and lead capture.",
-    tech: ["Next.js", "Tailwind", "Netlify Forms", "TypeScript"],
-    links: {
-      demo: "https://demo.appsbyrobby.com/harbor",
-      code: "https://github.com/appsbyrobby/harbor-landing",
-    },
+      "Full-scope roofing, plumbing, and remodel marketing site with service menus, process, and testimonials.",
+    tech: ["React", "TypeScript", "Tailwind", "Vite", "Netlify"],
+    link: "https://advanco.llc",
     features: [
-      "Hero + services with scannable CTAs",
-      "Netlify-backed form with spam honeypot",
-      "Lazy-loaded galleries for lighthouse scores",
-      "SEO-friendly copy and Open Graph tags",
+      "Service sections for roofing, plumbing, remodeling, and maintenance with scannable bullets",
+      "Why-us highlights, crew credentials, and storm-readiness messaging",
+      "Recent project and blog callouts with hero imagery",
+      "Contact call-to-action tied to Netlify forms and identity",
     ],
     challenges:
-      "Needed strong lighthouse performance without sacrificing visuals. Tuned media loading, critical CSS, and compressed hero assets to land >95 scores.",
+      "Needed to package long-form copy and multiple service lines without slowing the page. Tuned the Vite build, optimized hero assets, and leaned on Netlify for fast lead capture.",
     longDescription:
-      "Harbor Landing shows how to make small-business sites feel bespoke while staying lean. The build leans on static-friendly Next.js routes and Netlify forms so staff receive leads instantly without new infrastructure.",
+      "Advantage Roofing & Plumbing is a single-page site covering roofing, plumbing, storm response, and remodel work across central Indiana. Sections explain services, process, and testimonials while inviting visitors to schedule a walkthrough. The build keeps assets light for fast loads and uses Netlify for deployment and lead handling.",
   },
   {
-    slug: "beacon-desk",
-    name: "Beacon Desk",
-    category: "SaaS dashboard",
+    slug: "dj-jake-cozza",
+    name: "DJ Jake Cozza",
+    category: "Event DJ landing page",
     description:
-      "Subscription-ready admin panel with roles, billing hooks, and charting placeholders.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Prisma", "PostgreSQL"],
-    links: {
-      demo: "https://demo.appsbyrobby.com/beacon-desk",
-      code: "https://github.com/appsbyrobby/beacon-desk",
-    },
+      "High-energy single-page site for an Indianapolis DJ with services, social proof, and event stats.",
+    tech: ["React", "TypeScript", "Tailwind", "Vite", "Netlify"],
+    link: "https://djjakecozza.com",
     features: [
-      "Role-based access with guard components",
-      "Usage analytics cards and filters",
-      "Billing stubs ready for Stripe webhooks",
-      "Responsive nav with keyboard support",
+      "Hero with value props, premium sound badges, and CTA",
+      "About section with highlight metrics and photography",
+      "Service breakdowns for weddings, corporate events, and parties",
+      "Testimonials and differentiators to build trust before booking",
     ],
     challenges:
-      "Kept navigation and permissions simple for small teams. Built guard utilities and shared layouts so new modules drop in quickly.",
+      "Needed to convey energy without heavy assets. Built concise sections with iconography, optimized imagery, and responsive layout so CTAs stay visible on mobile.",
     longDescription:
-      "Beacon Desk is a pragmatic SaaS shell: authenticated areas, role-aware routes, and clean cards that scale from desktop to mobile. The stack keeps a strong TypeScript boundary between UI and data so changes stay predictable.",
+      "The DJ Jake Cozza site stacks a punchy hero, personal bio, service offerings, testimonials, and reasons-to-book into a fast-scrolling experience. Icons and stat blocks communicate credibility while imagery showcases past events. The layout keeps calls-to-action close by for booking on phones and desktops alike.",
   },
   {
-    slug: "apps-by-robbie-portfolio",
-    name: "Apps by Robbie Portfolio",
-    category: "Portfolio site",
+    slug: "optimum-glass",
+    name: "Optimum Glass Tech",
+    category: "Auto & home glass services",
     description:
-      "The site you’re reading: App Router build with Netlify-friendly contact.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "Netlify"],
-    links: {
-      demo: "https://appsbyrobby.com",
-      code: "https://github.com/appsbyrobby/portfolio",
-    },
+      "Mobile-first landing page for Indianapolis glass repair covering auto, residential, and commercial work.",
+    tech: ["React", "TypeScript", "Tailwind", "Vite", "Netlify"],
+    link: "https://optimum-glass.netlify.app",
     features: [
-      "Sectioned single-page experience with smooth scroll",
-      "Responsive layouts that stay lean",
-      "SEO meta and share cards",
-      "Netlify-ready forms and sitemap",
+      "Hero with trust signals for certifications, insurance help, and ADAS readiness",
+      "Service cards for auto, residential, and commercial glass with detailed bullet lists",
+      "Gallery of before/after installs and case highlights",
+      "Step-by-step process and FAQ blocks that feed a quote CTA",
     ],
     challenges:
-      "Balance playful and professional while keeping bundle size lean. Used shared components and restrained animations to keep it fast.",
+      "Needed to present many service lines without overwhelming visitors. Organized content into anchored sections, condensed bullet lists, and optimized imagery so the page stays quick on mobile connections.",
     longDescription:
-      "This portfolio is a reference build for small-but-polished marketing sites. It shows structured content, reusable UI, and zero back-end dependencies for quick Netlify deploys.",
-  },
-  {
-    slug: "chatloop",
-    name: "ChatLoop",
-    category: "Messaging app",
-    description:
-      "A cross-platform chat experience with typing indicators and media previews.",
-    tech: ["React Native", "Expo", "Firebase", "TypeScript"],
-    links: {
-      demo: "https://demo.appsbyrobby.com/chatloop",
-      code: "https://github.com/appsbyrobby/chatloop",
-    },
-    features: [
-      "Typing and presence indicators",
-      "Optimistic message sending with retries",
-      "Attachment previews with upload queue",
-      "Channel and DM support",
-    ],
-    challenges:
-      "Needed reliable messaging on poor networks. Implemented optimistic UI with retry queues and backoff logic to keep conversations flowing.",
-    longDescription:
-      "ChatLoop demonstrates production-ready messaging patterns: presence, status indicators, and resilient delivery. The UI keeps to a simple hierarchy so users can navigate quickly while still feeling modern.",
-  },
-  {
-    slug: "northwind-metrics",
-    name: "Northwind Metrics",
-    category: "Analytics dashboard",
-    description:
-      "Data-rich dashboard with filters, exports, and narrative insights for execs.",
-    tech: ["Next.js", "TypeScript", "Tailwind", "D3.js", "Supabase"],
-    links: {
-      demo: "https://demo.appsbyrobby.com/northwind",
-      code: "https://github.com/appsbyrobby/northwind-metrics",
-    },
-    features: [
-      "Composable charts and KPI cards",
-      "Date-range and segment filters",
-      "CSV export and saved views",
-      "Layout tuned for widescreen presentation",
-    ],
-    challenges:
-      "Balanced visual density with clarity. Built reusable chart shells and kept typography restrained so decision-makers can scan quickly.",
-    longDescription:
-      "Northwind Metrics shows how to present layered analytics without overwhelming users. It leans on consistent card layouts, a11y-friendly colors, and responsive grids that adapt to tablets and widescreen monitors.",
+      "Optimum Glass Tech explains mobile windshield repair, residential window glass, and commercial storefront work with clear trust markers like NGA certification and lifetime workmanship guarantees. The page walks through request -> confirm -> install, showcases recent transformations, and keeps quote CTAs visible for homeowners, fleet managers, and insurance-driven visitors.",
   },
 ];
 

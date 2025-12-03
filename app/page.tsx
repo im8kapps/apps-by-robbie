@@ -56,8 +56,14 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="space-y-6 fade-up" style={{ animationDelay: "60ms" }}>
             <div className="inline-flex items-center gap-2 rounded-full bg-[rgba(255,255,255,0.06)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--brand-blue)] shadow-sm ring-1 ring-[rgba(255,255,255,0.16)]">
-              <Sparkles className="h-4 w-4" />
-              Apps by Robbie
+              <Image
+                src="/logo_banner_noBG.png"
+                alt="Apps by Robbie"
+                width={120}
+                height={28}
+                className="h-7 w-auto rounded"
+                priority
+              />
             </div>
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-widest text-slate-300">
@@ -101,16 +107,16 @@ export default function Home() {
           </div>
           <div className="flex w-full max-w-md flex-col gap-4 fade-up" style={{ animationDelay: "140ms" }}>
             <div className="card overflow-hidden rounded-3xl border border-[rgba(255,255,255,0.08)] bg-[var(--brand-surface)] shadow-lg">
-              <div className="relative aspect-[16/7]">
+              <div className="relative aspect-[16/7] bg-[var(--brand-surface)]">
                 <Image
-                  src="/logo-banner.png"
+                  src="/logo_banner_noBG.png"
                   alt="Apps by Robbie branding"
                   fill
                   priority
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 480px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,19,34,0.65)] via-transparent to-[rgba(10,19,34,0.4)]" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,19,34,0.5)] via-transparent to-[rgba(10,19,34,0.4)]" />
               </div>
             </div>
             <div className="card relative rounded-3xl border border-[rgba(255,255,255,0.08)] bg-[var(--brand-surface)] p-6 shadow-lg">

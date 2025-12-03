@@ -65,35 +65,35 @@ export function ContactForm() {
         </label>
       </p>
       <div>
-        <label className="block text-sm font-medium text-slate-800">
+        <label className="block text-sm font-medium text-[var(--brand-navy)]">
           Name
         </label>
         <input
           required
           name="name"
-          className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-300"
+          className="mt-2 w-full rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-[var(--brand-navy)] shadow-sm focus:border-[var(--brand-blue)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-blue)] focus:ring-opacity-30"
           placeholder="Your name"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-slate-800">
+        <label className="block text-sm font-medium text-[var(--brand-navy)]">
           Email
         </label>
         <input
           required
           type="email"
           name="email"
-          className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-300"
+          className="mt-2 w-full rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-[var(--brand-navy)] shadow-sm focus:border-[var(--brand-blue)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-blue)] focus:ring-opacity-30"
           placeholder="you@example.com"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-slate-800">
+        <label className="block text-sm font-medium text-[var(--brand-navy)]">
           Project budget
         </label>
         <select
           name="budget"
-          className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-300"
+          className="mt-2 w-full rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-[var(--brand-navy)] shadow-sm focus:border-[var(--brand-blue)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-blue)] focus:ring-opacity-30"
         >
           {budgets.map((budget) => (
             <option key={budget}>{budget}</option>
@@ -101,7 +101,7 @@ export function ContactForm() {
         </select>
       </div>
       <div>
-        <label className="block text-sm font-medium text-slate-800">
+        <label className="block text-sm font-medium text-[var(--brand-navy)]">
           What are you building?
         </label>
         <textarea
@@ -110,7 +110,7 @@ export function ContactForm() {
           rows={4}
           value={message}
           onChange={(event) => setMessage(event.target.value)}
-          className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-300"
+          className="mt-2 w-full rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-[var(--brand-navy)] shadow-sm focus:border-[var(--brand-blue)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-blue)] focus:ring-opacity-30"
           placeholder="Share goals, timeline, and any links you have."
         />
       </div>
@@ -118,10 +118,10 @@ export function ContactForm() {
         <Button type="submit" disabled={status === "submitting"}>
           {status === "submitting" ? "Sending..." : "Send message"}
         </Button>
-        <p className="text-sm text-slate-500">
+        <p className="text-sm text-slate-200">
           Or email{" "}
           <a
-            className="font-semibold text-sky-600"
+            className="font-semibold text-[var(--brand-blue)]"
             href="mailto:robbie@appsbyrobbie.com"
           >
             robbie@appsbyrobbie.com
@@ -130,7 +130,7 @@ export function ContactForm() {
       </div>
       {statusMessage ? (
         <p
-          className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700"
+          className="rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-[var(--brand-navy)]"
           role="status"
         >
           {statusMessage}

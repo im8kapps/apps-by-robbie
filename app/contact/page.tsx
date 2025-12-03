@@ -19,30 +19,30 @@ export default function ContactPage() {
       />
 
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm fade-up" style={{ animationDelay: "60ms" }}>
+        <div className="card rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[var(--brand-surface)] p-6 shadow-sm fade-up" style={{ animationDelay: "60ms" }}>
           <ContactForm />
         </div>
-        <div className="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm fade-up" style={{ animationDelay: "120ms" }}>
-          <h2 className="text-xl font-semibold text-slate-900">
+        <div className="space-y-5 rounded-2xl border border-[rgba(255,255,255,0.08)] bg-[var(--brand-surface)] p-6 shadow-sm fade-up" style={{ animationDelay: "120ms" }}>
+          <h2 className="text-xl font-semibold text-[var(--brand-navy)]">
             How I work
           </h2>
-          <ul className="space-y-3 text-sm text-slate-600">
+          <ul className="space-y-3 text-sm text-slate-300">
             <li className="flex items-start gap-2">
-              <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
+              <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
               <span>
                 Clear weekly updates with demos or Looms so you always know
                 progress.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
+              <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
               <span>
                 Maintainable code: TypeScript, sensible folder structure,
                 comments only when they add clarity.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1 h-2 w-2 rounded-full bg-sky-500" />
+              <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
               <span>
                 Deployment-ready: Netlify/Next.js setup, environment variable
                 checklists, and handoff docs.

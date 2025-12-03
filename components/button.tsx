@@ -20,11 +20,11 @@ type ButtonProps = BaseProps &
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-sky-500 text-white shadow-sm hover:bg-sky-600",
+    "bg-[var(--brand-blue)] text-[#052136] shadow-sm hover:shadow-md hover:brightness-105",
   ghost:
-    "bg-white text-slate-900 shadow hover:shadow-md border border-slate-200 hover:-translate-y-0.5",
+    "bg-[rgba(255,255,255,0.06)] text-[var(--brand-navy)] shadow hover:shadow-md border border-[rgba(255,255,255,0.1)] hover:-translate-y-0.5 hover:border-[var(--brand-blue)]",
   outline:
-    "border border-slate-300 text-slate-800 hover:bg-slate-100",
+    "border border-[rgba(255,255,255,0.14)] text-[var(--brand-navy)] hover:bg-[rgba(255,255,255,0.06)] hover:border-[var(--brand-blue)]",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -45,7 +45,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     const classes = cn(
-      "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 active:translate-y-0.5",
+      "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand-blue)] focus-visible:ring-offset-1 active:translate-y-0.5",
       variantClasses[variant],
       sizeClasses[size],
       className,

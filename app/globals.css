@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #f8fafc;
-  --color-foreground: #0f172a;
+  --color-background: var(--brand-ice);
+  --color-foreground: var(--brand-navy);
   --font-sans: var(--font-sans);
+}
+
+:root {
+  --brand-navy: #eef4ff;
+  --brand-blue: #31b4ff;
+  --brand-orange: #f3a64b;
+  --brand-ice: #0b1524;
+  --brand-ice-deep: #09101d;
+  --brand-surface: #101b2c;
+  --brand-surface-strong: #0d1626;
 }
 
 *,
@@ -15,8 +25,13 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8fbff 0%, #eef7ff 45%, #f8fafc 100%);
-  color: #0f172a;
+  background: linear-gradient(
+    135deg,
+    #0a1322 0%,
+    #0d1a2d 45%,
+    #0a101b 100%
+  );
+  color: var(--brand-navy);
   transition: background-color 200ms ease, color 200ms ease;
 }
 
@@ -30,12 +45,12 @@ section {
 }
 
 ::selection {
-  background: rgba(14, 165, 233, 0.2);
+  background: rgba(29, 158, 216, 0.2);
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: var(--brand-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .fade-up {
