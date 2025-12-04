@@ -43,6 +43,9 @@ export default function ProjectDetail({ params }: Params) {
     notFound();
   }
 
+  const demoLink = project.demoLink ?? project.link;
+  const codeLink = project.codeLink;
+
   return (
     <Section className="pb-24 pt-12 sm:pt-16">
       <div className="mb-6 fade-up" style={{ animationDelay: "60ms" }}>
@@ -70,20 +73,24 @@ export default function ProjectDetail({ params }: Params) {
           ))}
         </div>
         <div className="flex flex-wrap gap-3 text-sm font-semibold text-slate-200">
-          <Link
-            href={project.links.demo}
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--brand-blue)] to-[var(--brand-orange)] px-4 py-2 text-white shadow hover:shadow-md"
-          >
-            Live demo
-            <ExternalLink className="h-4 w-4" />
-          </Link>
-          <Link
-            href={project.links.code}
-            className="inline-flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.16)] px-4 py-2 text-[var(--brand-navy)] hover:border-[var(--brand-blue)]"
-          >
-            View code
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
+          {demoLink && (
+            <Link
+              href={demoLink}
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--brand-blue)] to-[var(--brand-orange)] px-4 py-2 text-white shadow hover:shadow-md"
+            >
+              Live demo
+              <ExternalLink className="h-4 w-4" />
+            </Link>
+          )}
+          {codeLink && (
+            <Link
+              href={codeLink}
+              className="inline-flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.16)] px-4 py-2 text-[var(--brand-navy)] hover:border-[var(--brand-blue)]"
+            >
+              View code
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          )}
         </div>
       </div>
 

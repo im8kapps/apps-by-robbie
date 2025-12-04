@@ -5,6 +5,8 @@ export type Project = {
   description: string;
   tech: string[];
   link: string;
+  demoLink?: string;
+  codeLink?: string;
   features: string[];
   challenges: string;
   longDescription: string;

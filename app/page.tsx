@@ -3,7 +3,6 @@ import {
   Globe2,
   Rocket,
   Smartphone,
-  Sparkles,
   Stars,
 } from "lucide-react";
 import Image from "next/image";
