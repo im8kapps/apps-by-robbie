@@ -22,9 +22,9 @@ export function SiteHeader() {
           <Image
             src="/logo_banner_noBG.png"
             alt="Apps by Robbie"
-            width={140}
-            height={38}
-            className="h-9 w-auto rounded-md"
+            width={280}
+            height={76}
+            className="h-18 w-auto rounded-md"
             priority
           />
         </Link>

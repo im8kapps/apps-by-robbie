@@ -54,16 +54,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[var(--brand-ice)] via-[var(--brand-surface)] to-[var(--brand-ice-deep)] opacity-80 blur-3xl" />
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="space-y-6 fade-up" style={{ animationDelay: "60ms" }}>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[rgba(255,255,255,0.06)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[var(--brand-blue)] shadow-sm ring-1 ring-[rgba(255,255,255,0.16)]">
-              <Image
-                src="/logo_banner_noBG.png"
-                alt="Apps by Robbie"
-                width={120}
-                height={28}
-                className="h-7 w-auto rounded"
-                priority
-              />
-            </div>
+
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-widest text-slate-300">
                 Robbie Smith — Mobile & Web
@@ -102,45 +93,6 @@ export default function Home() {
                 <Stars className="h-4 w-4" />
                 Ship + iterate fast
               </span>
-            </div>
-          </div>
-          <div className="flex w-full max-w-md flex-col gap-4 fade-up" style={{ animationDelay: "140ms" }}>
-            <div className="card overflow-hidden rounded-3xl border border-[rgba(255,255,255,0.08)] bg-[var(--brand-surface)] shadow-lg">
-              <div className="relative aspect-[16/7] bg-[var(--brand-surface)]">
-                <Image
-                  src="/logo_banner_noBG.png"
-                  alt="Apps by Robbie branding"
-                  fill
-                  priority
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 480px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,19,34,0.5)] via-transparent to-[rgba(10,19,34,0.4)]" />
-              </div>
-            </div>
-            <div className="card relative rounded-3xl border border-[rgba(255,255,255,0.08)] bg-[var(--brand-surface)] p-6 shadow-lg">
-              <div className="absolute right-4 top-4 h-10 w-10 rounded-full bg-[rgba(29,158,216,0.16)] blur-2xl" />
-              <p className="text-sm font-semibold uppercase tracking-wide text-slate-300">
-                Quick Snapshot
-              </p>
-              <ul className="mt-4 space-y-3 text-sm text-slate-100">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
-                  7+ years building mobile & web products with TypeScript.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
-                  Comfortable across the stack: UI polish, API wiring, deploys.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
-                  Focused on maintainable patterns teams can live with.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-[var(--brand-orange)]" />
-                  Friendly, direct communication — async or live.
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -227,8 +179,8 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Button href="/contact">Open contact page</Button>
-              <Button href="mailto:robbie@appsbyrobby.com" variant="ghost">
-                Email robbie@appsbyrobby.com
+              <Button href="mailto:robbie@appsbyrobbie.com" variant="ghost">
+                Email robbie@appsbyrobbie.com
               </Button>
             </div>
           </div>
