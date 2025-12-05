@@ -5,8 +5,6 @@ import { Button } from "./button";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
-const budgets = ["$3k - $8k", "$8k - $20k", "$20k+", "Not sure yet"];
-
 export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [message, setMessage] = useState("");
@@ -86,19 +84,6 @@ export function ContactForm() {
           className="mt-2 w-full rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-[var(--brand-navy)] shadow-sm focus:border-[var(--brand-blue)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-blue)] focus:ring-opacity-30"
           placeholder="you@example.com"
         />
-      </div>
-      <div>
-        <label className="block text-sm font-medium text-[var(--brand-navy)]">
-          Project budget
-        </label>
-        <select
-          name="budget"
-          className="mt-2 w-full rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] px-4 py-3 text-sm text-[var(--brand-navy)] shadow-sm focus:border-[var(--brand-blue)] focus:outline-none focus:ring-1 focus:ring-[var(--brand-blue)] focus:ring-opacity-30"
-        >
-          {budgets.map((budget) => (
-            <option key={budget}>{budget}</option>
-          ))}
-        </select>
       </div>
       <div>
         <label className="block text-sm font-medium text-[var(--brand-navy)]">

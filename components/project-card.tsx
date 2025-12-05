@@ -36,17 +36,10 @@ export function ProjectCard({ project, className, style }: ProjectCardProps) {
           <TagBadge key={item} label={item} />
         ))}
       </div>
-      <div className="mt-6 flex items-center gap-3 text-sm font-medium text-[var(--brand-blue)]">
-        <Link
-          href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-1 rounded-full bg-[rgba(255,255,255,0.08)] px-3 py-1 text-[var(--brand-blue)] transition group-hover:bg-[rgba(255,255,255,0.12)]"
-        >
-          Read more
-          <ArrowUpRight className="h-4 w-4" />
-        </Link>
+      <div className="mt-6">
         <Link
           href={project.link}
-          className="inline-flex items-center gap-1 rounded-full border border-transparent px-2 py-1 text-[var(--brand-navy)] transition hover:text-[var(--brand-blue)]"
+          className="inline-flex items-center gap-2 rounded-full bg-[var(--brand-blue)] px-4 py-2 font-semibold text-white transition hover:bg-[var(--brand-orange)] hover:shadow-lg"
         >
           View project
           <ExternalLink className="h-4 w-4" />

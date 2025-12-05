@@ -28,8 +28,8 @@ const values = [
 
 const timeline = [
   {
-    year: "2016",
-    title: "Started shipping mobile apps",
+    year: "2011",
+    title: "Started my degree program",
     detail: "Built my first React Native app for a local nonprofit’s volunteers.",
   },
   {

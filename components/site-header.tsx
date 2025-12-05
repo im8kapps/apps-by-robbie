@@ -24,7 +24,7 @@ export function SiteHeader() {
             alt="Apps by Robbie"
             width={280}
             height={76}
-            className="h-18 w-auto rounded-md"
+            className="h-24 w-auto rounded-md"
             priority
           />
         </Link>

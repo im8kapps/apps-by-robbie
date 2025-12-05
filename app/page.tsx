@@ -1,10 +1,4 @@
-import {
-  ArrowRight,
-  Globe2,
-  Rocket,
-  Smartphone,
-  Stars,
-} from "lucide-react";
+import { ArrowRight, Globe2, Rocket, Smartphone, Stars } from "lucide-react";
 import Image from "next/image";
 import { Section } from "@/components/section";
 import { Button } from "@/components/button";
@@ -54,7 +48,6 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-[var(--brand-ice)] via-[var(--brand-surface)] to-[var(--brand-ice-deep)] opacity-80 blur-3xl" />
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="space-y-6 fade-up" style={{ animationDelay: "60ms" }}>
-
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-widest text-slate-300">
                 Robbie Smith — Mobile & Web
@@ -117,9 +110,7 @@ export default function Home() {
                   {service.title}
                 </h3>
               </div>
-              <p className="mt-3 text-sm text-slate-200">
-                {service.desc}
-              </p>
+              <p className="mt-3 text-sm text-slate-200">{service.desc}</p>
             </div>
           ))}
         </div>
