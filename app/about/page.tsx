@@ -30,12 +30,12 @@ const timeline = [
   {
     year: "2011",
     title: "Started my degree program",
-    detail: "Built my first React Native app for a local nonprofit’s volunteers.",
+    detail: "Began my journey in computer science and software development.",
   },
   {
-    year: "2019",
-    title: "Product engineer at a SaaS startup",
-    detail: "Owned mobile and web dashboards, introduced TypeScript across teams.",
+    year: "2014",
+    title: "First job: Barclays Mobile Banking",
+    detail: "Started my professional career building mobile banking solutions.",
   },
   {
     year: "2022",
@@ -91,7 +91,9 @@ export default function AboutPage() {
           className="rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[var(--brand-surface)] p-5 shadow-sm fade-up"
           style={{ animationDelay: "120ms" }}
         >
-          <h2 className="text-lg font-semibold text-[var(--brand-navy)]">Skills snapshot</h2>
+          <h2 className="text-lg font-semibold text-[var(--brand-navy)]">
+            Skills snapshot
+          </h2>
           <div className="mt-3 flex flex-wrap gap-2">
             {[
               "React Native",
@@ -111,7 +113,10 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[2fr,1fr]">
-        <div className="space-y-6 text-lg text-slate-200 fade-up" style={{ animationDelay: "80ms" }}>
+        <div
+          className="space-y-6 text-lg text-slate-200 fade-up"
+          style={{ animationDelay: "80ms" }}
+        >
           <p>
             I’m a React Native and Next.js developer who enjoys partnering with
             teams to turn sketches into shipped products. My focus is on calm,
@@ -125,19 +130,23 @@ export default function AboutPage() {
             decisions moving.
           </p>
         </div>
-        <div className="card rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[var(--brand-surface)] p-6 shadow-sm fade-up" style={{ animationDelay: "140ms" }}>
+        <div
+          className="card rounded-2xl border border-[rgba(255,255,255,0.06)] bg-[var(--brand-surface)] p-6 shadow-sm fade-up"
+          style={{ animationDelay: "140ms" }}
+        >
           <h2 className="text-lg font-semibold text-[var(--brand-navy)]">
             Values
           </h2>
           <ul className="mt-4 space-y-3 text-sm text-slate-300">
             {values.map((value) => (
-              <li key={value.title} className="rounded-xl bg-[rgba(255,255,255,0.04)] p-3">
+              <li
+                key={value.title}
+                className="rounded-xl bg-[rgba(255,255,255,0.04)] p-3"
+              >
                 <p className="font-semibold text-[var(--brand-navy)]">
                   {value.title}
                 </p>
-                <p className="text-sm text-slate-300">
-                  {value.detail}
-                </p>
+                <p className="text-sm text-slate-300">{value.detail}</p>
               </li>
             ))}
           </ul>
@@ -160,9 +169,7 @@ export default function AboutPage() {
               <p className="mt-2 text-lg font-semibold text-[var(--brand-navy)]">
                 {item.title}
               </p>
-              <p className="text-sm text-slate-300">
-                {item.detail}
-              </p>
+              <p className="text-sm text-slate-300">{item.detail}</p>
             </div>
           ))}
         </div>

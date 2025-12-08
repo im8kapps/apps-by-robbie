@@ -40,7 +40,7 @@ export function SiteHeader() {
                 href={item.href}
                 className={cn(
                   "transition hover:text-[var(--brand-blue)]",
-                  isActive && "text-[var(--brand-blue)]",
+                  isActive && "text-[var(--brand-blue)]"
                 )}
               >
                 {item.label}
