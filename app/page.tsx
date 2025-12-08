@@ -1,5 +1,4 @@
 import { ArrowRight, Globe2, Rocket, Smartphone, Stars } from "lucide-react";
-import Image from "next/image";
 import { Section } from "@/components/section";
 import { Button } from "@/components/button";
 import { TagBadge } from "@/components/tag-badge";
